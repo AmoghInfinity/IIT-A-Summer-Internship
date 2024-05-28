@@ -11,6 +11,7 @@ data["Brand"]=data.Name.str.split().str.get(0)
 data["Model"]=data.Name.str.split().str.get(1)+data.Name.str.split().str.get(2)
 data=data.drop(['S.No.'], axis=1)
 data["Brand"].replace({'Land':'Land Rover','Mini':'Mini Cooper','ISUZU':'Isuzu'},inplace=True)
+print(data.describe(include='all').T)
 cat_cols=data.select_dtypes(include=['object']).columns
 num_cols=data.select_dtypes(include=np.number).columns.tolist()
 for col in num_cols:
