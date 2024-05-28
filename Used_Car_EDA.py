@@ -74,7 +74,3 @@ axarr[3][1].set_title("Car_Age Vs Price", fontsize=18)
 plt.subplots_adjust(hspace=1.0)
 plt.subplots_adjust(wspace=.5)
 sns.despine()
-for col in num_cols:
-  plt.figure(figsize=(18,18))
-  sns.heatmap(data=data[col], annot=True, vmin=-1, vmax=1)
-  plt.show()
